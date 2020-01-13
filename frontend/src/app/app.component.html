@@ -1,0 +1,10 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="header">
+  <div>Book Store</div>
+  <div><button mat-raised-button class="push-right"
+               [routerLink]="['/add-book']"><mat-icon>add</mat-icon></button></div>
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
