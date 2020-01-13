@@ -1,0 +1,23 @@
+{
+  "name": "dvir-book-store",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "run-p install:backend install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+
+    "start": "run-p start:backend start:frontend",
+    "start:backend": "npm run start --prefix backend",
+    "start:frontend": "npm run start --prefix frontend",
+
+    "build": "run-p build:backend build:frontend",
+    "build:backend": "cd backend && npm run build && cd ..",
+    "build:frontend": "cd frontend && npm run build && cd ..",
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.2",
+    "opn-cli": "^3.1.0"
+  }
+}
