@@ -35,11 +35,6 @@ const server = index.listen(port, () => {
     console.log('Connected to port ' + port)
 })
 
-// Find 404 and hand over to error handler
-index.use((req, res, next) => {
-    next(createError(404));
-});
-
 // error handler
 index.use(function (err, req, res, next) {
     console.error(err.message);
